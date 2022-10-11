@@ -31,7 +31,7 @@
         </div>
       </div>
 
-<!-- ------------------------Panel de efectos------------------------- -->
+      <!-- ------------------------Panel de efectos------------------------- -->
 
       <div id="panelEfectos" class="panelEfectosNone">
         <h2>IMAGEN</h2>
@@ -156,57 +156,92 @@
         <button>Restablecer filtros</button>
       </div>
 
-<!-- -----------------------Panel de texto------------------------------------- -->
+      <!-- -----------------------Panel de texto------------------------------------- -->
 
       <div id="panelTexto" class="panelTexto">
-        <h2>TEXTO</h2>
-        <div class="contenedorTextoSuperior">
-          <label for="textoSuperior">Superior</label>
-          <input type="text" id="textoSuperior" />
-          <input type="checkbox" /><span>sin texto superior</span>
+        <div class="titulo"><h2>TEXTO</h2></div>
+        <div class="contenedorTextoSuperior contenedorPrincipal">
+          <label for="textoSuperior">SUPERIOR</label><br />
+          <input
+            class="inputTextoYNumber"
+            type="text"
+            id="textoSuperior"
+          /><br />
+          <input type="checkbox" /><span> Sin texto superior</span>
         </div>
-        <div class="contenedorTextoInferior">
-          <label for="textoInferior">Inferior</label>
-          <input type="text" id="textoSuperior" />
-          <input type="checkbox" /><span>sin texto inferior</span>
+        <div class="contenedorTextoInferior contenedorPrincipal">
+          <label for="textoInferior">INFERIOR</label><br />
+          <input
+            class="inputTextoYNumber"
+            type="text"
+            id="textoSuperior"
+          /><br />
+          <input type="checkbox" /><span> Sin texto inferior</span>
         </div>
-        <label for="selectorFuente">FUENTE</label>
-        <select name="fuente" id="suelectFuente">
-          <option value="impact">Impact</option>
-          <option value="arialBlack">Arial Black</option>
-          <option value="AmericanT">American Typewriter</option>
-          <option value="AndaleMono">Andale mono</option>
-          <option value="comicSans">Comic Sans MS</option>
-          <option value="helvetica">Helvetica</option>
-          <option value="impact">Impact</option>
-          <option value="verdana">Verdana</option>
-          <option value="timesNR">Times New Roman</option>
-        </select>
-        <div class="configuracionFuente">
-          <input type="number" id="tamañoFuente" min="12" />
-          <button></button>
-          <button></button>
-          <button></button>
-        </div>
-        <div class="SeccionColoresFuente">
-          <div class="selectorDefuente">
-            <input type="color" value="#FFFFFF" />
-            <span>#FFFFFF</span>
+        <div class="contenedorFuenteYEstilo contenedorPrincipal">
+          <div class="contedenedorSelectorFuente">
+            <label for="selectorFuente">FUENTE</label><br />
+            <select class="inputTextoYNumber" name="fuente" id="suelectFuente">
+              <option value="impact">Impact</option>
+              <option value="arialBlack">Arial Black</option>
+              <option value="AmericanT">American Typewriter</option>
+              <option value="AndaleMono">Andale mono</option>
+              <option value="comicSans">Comic Sans MS</option>
+              <option value="helvetica">Helvetica</option>
+              <option value="impact">Impact</option>
+              <option value="verdana">Verdana</option>
+              <option value="timesNR">Times New Roman</option>
+            </select>
           </div>
-          <div class="selectorDefondoFunte">
-            <input type="color" value="#FFFFFF" />
-            <span>#FFFFFF</span>
+          <div class="contenedorConfiguracionFuente">
+            <input
+              class="inputNumberTamañoFuente"
+              type="number"
+              id="tamañoFuente"
+              min="12"
+            />
+            <button class="botonPosicionTexto">i1</button>
+            <button class="botonPosicionTexto">i2</button>
+            <button class="botonPosicionTexto">i3</button>
           </div>
-          <input type="checkbox" /><span>Fondo Transparente</span>
         </div>
-        <label for="contorno">CONTORNO</label>
-        <button>Ninguno</button>
-        <button>Claro</button>
-        <button>Oscuro</button>
-        <label for="espaciado">ESPACIADO</label>
-        <input type="number" />
-        <label for="interlineado">INTERLINEADO</label>
-        <input type="nunmer" />
+        <div class="contenedorColoresFuente contenedorPrincipal">
+          <div>       
+            <div>
+              <label for="colorFuente">COLOR</label>
+            </div>
+            <div class="contenedorColor">
+              <input class="circuloColor" id="colorFuente" type="color" value="#FFFFFF" />
+              <span>#FFFFFF</span>
+            </div>
+          </div>
+          <div>
+            <div>
+              <label for="colorFondo">FONDO</label>
+            </div>
+            <div class="contenedorColorFondo">
+              <input class="circuloColor" id="colorFondo" type="color" value="#FFFFFF" />
+              <span>#FFFFFF</span>
+            </div>
+          </div>
+        </div>
+        <div><input class="contenedorPrincipal" type="checkbox" /><span> Fondo Transparente</span></div>
+        <div class="contornoTexto contenedorPrincipal">
+          <label for="contorno">CONTORNO</label>
+          <div class="contornoBotones">
+            <button class="botonContorno">Ninguno</button>
+            <button class="botonContorno">Claro</button>
+            <button class="botonContorno">Oscuro</button>
+          </div>
+        </div>
+        <div class="contenedorEspaciado contenedorPrincipal">
+          <label for="espaciado">ESPACIADO</label>
+          <input class="inputTextoYNumber" type="number" />
+        </div>
+        <div class="contenedorInterlineado contenedorPrincipal">
+          <label for="interlineado">INTERLINEADO</label>
+          <input class="inputTextoYNumber" type="number" />
+        </div>
       </div>
     </div>
     <script src="main.js"></script>
