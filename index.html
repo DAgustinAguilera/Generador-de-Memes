@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="padre">
+      <div class="contenedorMeme">
+        <div class="hover">
+          <h1>Generador de Memes</h1>
+          <div class="botonesHover">
+            <button id="botonImagen">imagen</button>
+            <button id="botonTexto">Texto</button>
+            <button id="botonModoOscuro">Modo oscuro</button>
+          </div>
+        </div>
+        <div class="contenedorImagenYTexto">
+          <div class="meme">
+            <div class="imagen">
+              <div class="textoArriba"></div>
+              <div class="textoAbajo"></div>
+            </div>
+          </div>
+          <div class="botonDescargar">
+            <button>Descargar imagen</button>
+          </div>
+        </div>
+      </div>
+
+<!-- ------------------------Panel de efectos------------------------- -->
+
+      <div id="panelEfectos" class="panelEfectosNone">
+        <h2>IMAGEN</h2>
+        <div class="seccionColorYDistribucion">
+          <div class="selectorDeColor">
+            <input type="color" value="#FFFFFF" />
+            <span>#FFFFFF</span>
+          </div>
+          <div class="desplegableDistribucion">
+            <select id="modoDistribucionImagen">
+              <option value="a">Aclarar</option>
+              <option value="b">Oscurecer</option>
+              <option value="c">Diferencia</option>
+              <option value="d">Luminocidad</option>
+              <option value="e">Multiiplicar</option>
+              <option value="f">Ninguno</option>
+            </select>
+          </div>
+        </div>
+        <div class="seccionRangosFiltros">
+          <h4 class="Filtros">FILTROS</h4>
+          <div class="rangoDeFiltro">
+            <label for="brillo">brillo</label>
+            <input
+              id="brillo"
+              class="rango"
+              type="range"
+              min="0"
+              max="1"
+              step="0.1"
+            />
+          </div>
+          <div class="rangoDeFiltro">
+            <label for="opacidad">opacidad</label>
+            <input
+              id="opacidad"
+              class="rango"
+              type="range"
+              min="0"
+              max="1"
+              step="0.1"
+            />
+          </div>
+          <div class="rangoDeFiltro">
+            <label for="contraste">contraste</label>
+            <input
+              id="contraste"
+              class="rango"
+              type="range"
+              min="0"
+              max="1"
+              step="0.1"
+            />
+          </div>
+          <div class="rangoDeFiltro">
+            <label for="desenfoque">desenfoque</label>
+            <input
+              id="desenfoque"
+              class="rango"
+              type="range"
+              min="0"
+              max="1"
+              step="0.1"
+            />
+          </div>
+          <div class="rangoDeFiltro">
+            <label for="escalaDeGrises">escalaDeGrises</label>
+            <input
+              id="escalaDeGrises"
+              class="rango"
+              type="range"
+              min="0"
+              max="1"
+              step="0.1"
+            />
+          </div>
+          <div class="rangoDeFiltro">
+            <label for="sepia">sepia</label>
+            <input
+              id="sepia"
+              class="rango"
+              type="range"
+              min="0"
+              max="1"
+              step="0.1"
+            />
+          </div>
+          <div class="rangoDeFiltro">
+            <label for="hue">hue</label>
+            <input
+              id="hue"
+              class="rango"
+              type="range"
+              min="0"
+              max="1"
+              step="0.1"
+            />
+          </div>
+          <div class="rangoDeFiltro">
+            <label for="saturado">saturado</label>
+            <input
+              id="saturado"
+              class="rango"
+              type="range"
+              min="0"
+              max="1"
+              step="0.1"
+            />
+          </div>
+          <div class="rangoDeFiltro">
+            <label for="negativo">negativo</label>
+            <input
+              id="negativo"
+              class="rango"
+              type="range"
+              min="0"
+              max="1"
+              step="0.1"
+            />
+          </div>
+        </div>
+        <button>Restablecer filtros</button>
+      </div>
+
+<!-- -----------------------Panel de texto------------------------------------- -->
+
+      <div id="panelTexto" class="panelTexto">
+        <h2>TEXTO</h2>
+        <div class="contenedorTextoSuperior">
+          <label for="textoSuperior">Superior</label>
+          <input type="text" id="textoSuperior" />
+          <input type="checkbox" /><span>sin texto superior</span>
+        </div>
+        <div class="contenedorTextoInferior">
+          <label for="textoInferior">Inferior</label>
+          <input type="text" id="textoSuperior" />
+          <input type="checkbox" /><span>sin texto inferior</span>
+        </div>
+        <label for="selectorFuente">FUENTE</label>
+        <select name="fuente" id="suelectFuente">
+          <option value="impact">Impact</option>
+          <option value="arialBlack">Arial Black</option>
+          <option value="AmericanT">American Typewriter</option>
+          <option value="AndaleMono">Andale mono</option>
+          <option value="comicSans">Comic Sans MS</option>
+          <option value="helvetica">Helvetica</option>
+          <option value="impact">Impact</option>
+          <option value="verdana">Verdana</option>
+          <option value="timesNR">Times New Roman</option>
+        </select>
+        <div class="configuracionFuente">
+          <input type="number" id="tamañoFuente" min="12" />
+          <button></button>
+          <button></button>
+          <button></button>
+        </div>
+        <div class="SeccionColoresFuente">
+          <div class="selectorDefuente">
+            <input type="color" value="#FFFFFF" />
+            <span>#FFFFFF</span>
+          </div>
+          <div class="selectorDefondoFunte">
+            <input type="color" value="#FFFFFF" />
+            <span>#FFFFFF</span>
+          </div>
+          <input type="checkbox" /><span>Fondo Transparente</span>
+        </div>
+        <label for="contorno">CONTORNO</label>
+        <button>Ninguno</button>
+        <button>Claro</button>
+        <button>Oscuro</button>
+        <label for="espaciado">ESPACIADO</label>
+        <input type="number" />
+        <label for="interlineado">INTERLINEADO</label>
+        <input type="nunmer" />
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
