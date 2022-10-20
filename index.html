@@ -21,8 +21,8 @@
         <div class="contenedorImagenYTexto">
           <div class="meme">
             <div class="imagen">
-              <div class="textoArriba"></div>
-              <div class="textoAbajo"></div>
+              <div id="textoArriba" class="textoArriba"><h2>Texto Superior</h2></div>
+              <div id="textoAbajo" class="textoAbajo"><h2>Texto Inferior</h2></div>
             </div>
           </div>
           <div class="botonDescargar">
@@ -160,37 +160,39 @@
 
       <div id="panelTexto" class="panelTexto">
         <div class="titulo"><h2>TEXTO</h2></div>
-        <div class="contenedorTextoSuperior contenedorPrincipal">
+        <div id="contenedorTextoSuperior" class="contenedorTextoSuperior contenedorPrincipal">
           <label for="textoSuperior">SUPERIOR</label><br />
           <input
             class="inputTextoYNumber"
             type="text"
             id="textoSuperior"
+            value="Texto Superior"
           /><br />
-          <input type="checkbox" /><span> Sin texto superior</span>
+          <input id="SacarTextoSuperior" class="SacarTextoSuperior" type="checkbox" /><span> Sin texto superior</span>
         </div>
-        <div class="contenedorTextoInferior contenedorPrincipal">
+        <div id="contenedorTextoInferior" class="contenedorTextoInferior contenedorPrincipal">
           <label for="textoInferior">INFERIOR</label><br />
           <input
             class="inputTextoYNumber"
             type="text"
-            id="textoSuperior"
+            id="textoInferior"
+            value="Texto Inferior"
           /><br />
-          <input type="checkbox" /><span> Sin texto inferior</span>
+          <input id="SacarTextoInferior" class="SacarTextoInferior" type="checkbox" /><span> Sin texto inferior</span>
         </div>
         <div class="contenedorFuenteYEstilo contenedorPrincipal">
           <div class="contedenedorSelectorFuente">
             <label for="selectorFuente">FUENTE</label><br />
-            <select class="inputTextoYNumber" name="fuente" id="suelectFuente">
-              <option value="impact">Impact</option>
-              <option value="arialBlack">Arial Black</option>
-              <option value="AmericanT">American Typewriter</option>
-              <option value="AndaleMono">Andale mono</option>
-              <option value="comicSans">Comic Sans MS</option>
-              <option value="helvetica">Helvetica</option>
-              <option value="impact">Impact</option>
-              <option value="verdana">Verdana</option>
-              <option value="timesNR">Times New Roman</option>
+            <select id="selectorFuente"class="inputTextoYNumber" name="fuente" id="suelectFuente">
+              <option value="Impact,Charcoal,sans-serif">Impact</option>
+              <option value="Arial, Helvetica, sans-serif">Arial Black</option>
+              <option value="monospace ">Monospace</option>
+              <!-- <option value="AndaleMono">Andale mono</option> -->
+              <option value="cursive">Comic Sans MS</option>
+              <option value="Arial, Helvetica, sans-serif">Helvetica</option>
+              <!-- <option value="impact">Impact</option> -->
+              <!-- <option value="Verdana, Geneva, Tahoma, sans-serif">Verdana</option> -->
+              <option value="'Times New Roman', Times, serif">Times New Roman</option>
             </select>
           </div>
           <div class="contenedorConfiguracionFuente">
@@ -199,6 +201,7 @@
               type="number"
               id="tamañoFuente"
               min="12"
+              value="12"
             />
             <button class="botonPosicionTexto">i1</button>
             <button class="botonPosicionTexto">i2</button>
@@ -225,7 +228,7 @@
             </div>
           </div>
         </div>
-        <div><input class="contenedorPrincipal" type="checkbox" /><span> Fondo Transparente</span></div>
+        <div><input id="sacarFondoTexto" class="contenedorPrincipal" type="checkbox" /><span> Fondo Transparente</span></div>
         <div class="contornoTexto contenedorPrincipal">
           <label for="contorno">CONTORNO</label>
           <div class="contornoBotones">
